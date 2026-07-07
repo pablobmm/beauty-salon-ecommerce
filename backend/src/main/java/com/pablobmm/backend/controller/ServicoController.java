@@ -27,6 +27,12 @@ public class ServicoController {
         return service.buscarPorId(id);
     }
 
+    @PutMapping("/{id}")
+    public Servico atualizarPorId(@PathVariable Long id,
+                                  @RequestBody Servico servico) {
+        return service.atualizarPorId(id,servico);
+    }
+
     @PostMapping
     public Servico salvar(@RequestBody Servico servico) {
         return service.salvar(servico);

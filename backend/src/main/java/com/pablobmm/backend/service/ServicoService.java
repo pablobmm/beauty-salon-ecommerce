@@ -24,6 +24,18 @@ public class ServicoService {
                 .orElseThrow(() -> new RuntimeException("Serviço não encontrado"));
     }
 
+    public Servico atualizarPorId(Long id, Servico servicoAtualizado){
+        Servico servico = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Serviço não encontrado"));
+
+        servico.setNome(servicoAtualizado.getNome());
+        servico.setPreco(servicoAtualizado.getPreco());
+        servico.setDuracaoMinutos(servicoAtualizado.getDuracaoMinutos());
+
+        return repository.save(servico);
+
+    }
+
     public Servico salvar(Servico servico) {
         return repository.save(servico);
     }
