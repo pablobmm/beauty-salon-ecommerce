@@ -19,6 +19,11 @@ public class ServicoService {
         return repository.findAll();
     }
 
+    public Servico buscarPorId(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Serviço não encontrado"));
+    }
+
     public Servico salvar(Servico servico) {
         return repository.save(servico);
     }

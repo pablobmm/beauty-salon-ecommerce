@@ -22,6 +22,11 @@ public class ServicoController {
         return service.listarTodos();
     }
 
+    @GetMapping("/{id}")
+    public Servico buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
+
     @PostMapping
     public Servico salvar(@RequestBody Servico servico) {
         return service.salvar(servico);
