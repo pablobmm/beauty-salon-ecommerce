@@ -39,4 +39,10 @@ public class ServicoService {
     public Servico salvar(Servico servico) {
         return repository.save(servico);
     }
+
+    public void deletar(Long id){
+        repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Serviço não encontrado"));
+        repository.deleteById(id);
+    }
 }

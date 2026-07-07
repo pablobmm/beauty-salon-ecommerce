@@ -37,4 +37,9 @@ public class ServicoController {
     public Servico salvar(@RequestBody Servico servico) {
         return service.salvar(servico);
     }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id){
+        service.deletar(id);
+    }
 }
