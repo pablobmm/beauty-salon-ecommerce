@@ -1,7 +1,9 @@
 package com.pablobmm.backend.controller;
 
-import com.pablobmm.backend.entity.Servico;
+import com.pablobmm.backend.dto.ServicoRequestDTO;
+import com.pablobmm.backend.dto.ServicoResponseDTO;
 import com.pablobmm.backend.service.ServicoService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,24 +20,24 @@ public class ServicoController {
     }
 
     @GetMapping
-    public List<Servico> listar() {
+    public List<ServicoResponseDTO> listar() {
         return service.listarTodos();
     }
 
     @GetMapping("/{id}")
-    public Servico buscarPorId(@PathVariable Long id) {
+    public ServicoResponseDTO buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
 
     @PutMapping("/{id}")
-    public Servico atualizarPorId(@PathVariable Long id,
-                                  @RequestBody Servico servico) {
-        return service.atualizarPorId(id,servico);
+    public ServicoResponseDTO atualizarPorId(@PathVariable Long id,
+                                  @Valid @RequestBody ServicoRequestDTO dto) {
+        return service.atualizarPorId(id,dto);
     }
 
     @PostMapping
-    public Servico salvar(@RequestBody Servico servico) {
-        return service.salvar(servico);
+    public ServicoResponseDTO salvar(@Valid @RequestBody ServicoRequestDTO dto) {
+        return service.salvar(dto);
     }
 
     @DeleteMapping("/{id}")
