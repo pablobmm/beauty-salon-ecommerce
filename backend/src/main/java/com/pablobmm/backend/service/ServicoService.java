@@ -3,6 +3,7 @@ package com.pablobmm.backend.service;
 import com.pablobmm.backend.dto.ServicoRequestDTO;
 import com.pablobmm.backend.dto.ServicoResponseDTO;
 import com.pablobmm.backend.entity.Servico;
+import com.pablobmm.backend.exception.RecursoNaoEncontradoException;
 import com.pablobmm.backend.mapper.ServicoMapper;
 import com.pablobmm.backend.repository.ServicoRepository;
 import org.springframework.stereotype.Service;
@@ -58,7 +59,7 @@ public class ServicoService {
 
     private Servico buscarEntidadePorId(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Serviço não encontrado"));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Serviço não encontrado"));
     }
 
 }

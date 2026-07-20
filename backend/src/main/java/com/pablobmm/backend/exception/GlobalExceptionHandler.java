@@ -28,4 +28,13 @@ public class GlobalExceptionHandler {
         return erros;
     }
 
-}
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(RecursoNaoEncontradoException.class)
+    public Map<String, String> tratarRecursoNaoEncontrado(
+            RecursoNaoEncontradoException ex
+    ) {
+        return Map.of("erro", ex.getMessage());
+    }
+
+    }
+
