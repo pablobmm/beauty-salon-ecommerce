@@ -1,5 +1,6 @@
 package com.pablobmm.backend.entity;
 
+import com.pablobmm.backend.enums.Especialidade;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,6 +22,6 @@ public class Profissional {
 
     private String telefone;
 
-    private String especialidade;
-    
+    private Especialidade especialidade;
+
 }
