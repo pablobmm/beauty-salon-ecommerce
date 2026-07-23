@@ -1,0 +1,131 @@
+.topbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 36px;
+  min-height: 82px;
+  padding: 14px 22px;
+  position: sticky;
+  top: 14px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.94);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(85, 49, 60, 0.09);
+  backdrop-filter: blur(18px);
+}
+
+.brand-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.brand-box > span:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: white;
+  background: var(--accent);
+  font-family: var(--heading);
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+
+.brand-name {
+  font-family: var(--heading);
+  font-size: 23px;
+  line-height: 1;
+}
+
+.brand-subtitle {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 34px);
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 180ms ease;
+}
+
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 1020px) {
+  .topbar {
+    grid-template-columns: auto 1fr;
+  }
+
+  .main-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  .topbar > .whatsapp {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .topbar {
+    top: 8px;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .topbar > .whatsapp {
+    min-height: 42px;
+    padding: 9px 14px;
+    font-size: 12px;
+  }
+
+  .main-nav {
+    justify-content: space-between;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+
+}
