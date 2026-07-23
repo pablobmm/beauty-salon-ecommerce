@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection'
 import ServicesSection from './components/ServicesSection'
 import BookingSection from './components/BookingSection'
 import ContactSection from './components/ContactSection'
+import Footer from './components/Footer'
 import './styles/App.css'
 
 const fallbackServices = [
@@ -123,11 +124,7 @@ function App() {
         <ContactSection />
       </main>
 
-      <footer className="footer">
-        <div><strong>Rose&Ney</strong><span>Cabeleireiros</span></div>
-        <p>© {new Date().getFullYear()} · Beleza com identidade e carinho.</p>
-        <a href="#inicio">Voltar ao topo ↑</a>
-      </footer>
+      <Footer />
     </div>
   )
 }
