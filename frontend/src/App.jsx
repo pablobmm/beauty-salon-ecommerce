@@ -3,6 +3,7 @@ import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import ServicesSection from './components/ServicesSection'
 import BookingSection from './components/BookingSection'
+import ContactSection from './components/ContactSection'
 import './styles/App.css'
 
 const fallbackServices = [
@@ -119,23 +120,7 @@ function App() {
         />
 
 
-        <section className="contact-section section-block" id="contato">
-          <div>
-            <span className="section-kicker">FALE COM A GENTE</span>
-            <h2>Vai ser um prazer cuidar de você.</h2>
-          </div>
-          <div className="contact-grid">
-            <div className="contact-item">
-              <span>01</span><p><strong>Horários</strong>Ter–Sáb, das 8h às 19h</p>
-            </div>
-            <div className="contact-item">
-              <span>02</span><p><strong>Atendimento</strong>Consulte disponibilidade pelo WhatsApp</p>
-            </div>
-            <div className="contact-item">
-              <span>03</span><p><strong>Endereço</strong>Adicione aqui o endereço do salão</p>
-            </div>
-          </div>
-        </section>
+        <ContactSection />
       </main>
 
       <footer className="footer">
