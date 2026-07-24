@@ -1,3 +1,5 @@
+import '../styles/BookingSection.css'
+
 function BookingSection({
     submitBooking,
     selectedService,
