@@ -234,49 +234,6 @@ a {
 }
 
 
-
-.contact-section {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 70px;
-  align-items: start;
-  padding-bottom: 90px;
-}
-
-.contact-grid {
-  display: grid;
-}
-
-.contact-item {
-  display: grid;
-  grid-template-columns: 38px 1fr;
-  gap: 18px;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.contact-item > span {
-  padding-top: 3px;
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.contact-item p {
-  display: grid;
-  gap: 5px;
-  margin: 0;
-  color: var(--text);
-  font-size: 14px;
-}
-
-.contact-item strong {
-  color: var(--text-h);
-  font-size: 16px;
-}
-
-
-
 @media (max-width: 1020px) {
   .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -307,11 +264,6 @@ a {
 
   .service-card {
     min-height: 330px;
-  }
-
-  .contact-section {
-    gap: 34px;
-    padding-bottom: 64px;
   }
 
 }
