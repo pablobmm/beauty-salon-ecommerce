@@ -1,3 +1,5 @@
+import '../styles/ServicesSection.css'
+
 function ServicesSection({
   services,
   catalogStatus,
